@@ -33,7 +33,7 @@ docker run \
   --rm -it ghcr.io/matthiasbalke/imagemagick:0.1.0-7.1.1.13-r1
 ```
 
-## build locally
+## Build Locally
 ```sh
 # build the image locally (tag: matthiasbalke/imagemagick:local)
 ./dev-build.sh
@@ -48,7 +48,7 @@ based on the following:
 - ``MAJOR``: Incompatible or major changes.
 - ``MINOR``: Backwards-compatible new features and enhancements.
 - ``PATCH``: Backwards-compatible bugfixes and package updates.
-- ``BUNDLED_IMAGEMAGICK_VERSION``: The ImageMagick contained in the image.
+- ``BUNDLED_IMAGEMAGICK_VERSION``: The ImageMagick version used in the image.
 
 ## License
 
