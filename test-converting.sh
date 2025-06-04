@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # use latest official build image from branch main
-IMAGE="ghcr.io/matthiasbalke/imagemagick:0.1.0-7.1.1.13-r1"
+IMAGE="ghcr.io/matthiasbalke/imagemagick:main"
 # use local build image
 #IMAGE="matthiasbalke/imagemagick:local"
 
