@@ -21,7 +21,7 @@ It can be used for simple file conversions or testing. Just mount a working dire
 ```sh
 docker run \
   --mount type=bind,src=$(pwd)/source,dst=/source \
-  --rm -it ghcr.io/matthiasbalke/imagemagick:0.1.0 \
+  --rm -it ghcr.io/matthiasbalke/imagemagick:0.1.0-7.1.1.13-r1 \
   mogrify -format jpg '/source/Test.HEIC'
 ```
 
@@ -30,7 +30,7 @@ To run a more complex conversion, just mount a working directory with the images
 docker run \
   --mount type=bind,src=$(pwd)/source,dst=/source \
   --mount type=bind,src=$(pwd)/process-images.sh,dst=/process-images.sh \
-  --rm -it ghcr.io/matthiasbalke/imagemagick:0.1.0
+  --rm -it ghcr.io/matthiasbalke/imagemagick:0.1.0-7.1.1.13-r1
 ```
 
 ## build locally
