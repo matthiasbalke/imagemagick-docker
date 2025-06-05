@@ -5,10 +5,11 @@ A dockerized version of [ImageMagick][imagemagick-url] including all needed depe
 ## Bundled Software
 
  * `imagemagick=7.1.1.13-r1`
+ * `python3=3.11.12-r1`
 
 ## Usage
 
-The image contains a simple shell script `/process-images.sh` which gets executed on container start. 
+The image contains a simple shell script `/process-images.py` which gets executed on container start. 
 
 ```sh
 #!/bin/sh
@@ -25,11 +26,11 @@ docker run \
   mogrify -format jpg '/source/Test.HEIC'
 ```
 
-To run a more complex conversion, just mount a working directory with the images as e.g. `/source` and a script to `/process-images.sh` like this:
+To run a more complex conversion, just mount a working directory with the images as e.g. `/source` and a script to `/process-images.py` like this:
 ```sh
 docker run \
   --mount type=bind,src=$(pwd)/source,dst=/source \
-  --mount type=bind,src=$(pwd)/process-images.sh,dst=/process-images.sh \
+  --mount type=bind,src=$(pwd)/process-images.py,dst=/process-images.py \
   --rm -it ghcr.io/matthiasbalke/imagemagick:0.1.1-7.1.1.13-r1
 ```
 
